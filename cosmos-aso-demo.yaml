@@ -24,3 +24,33 @@ spec:
   databaseAccountOfferType: Standard
   locations:
     - locationName: eastus
+---
+apiVersion: microsoft.documentdb.azure.com/v1alpha1api20210515
+kind: SqlDatabase
+metadata:
+  name: database1
+  namespace: mjb-aks-cosmosdb
+spec:
+  location: eastus
+  owner:
+    name: mjb-aks-cdb
+  resource:
+    id: database1
+---
+apiVersion: microsoft.documentdb.azure.com/v1alpha1api20210515
+kind: SqlDatabaseContainer
+metadata:
+  name: container1
+  namespace: mjb-aks-cosmosdb
+spec:
+  location: eastus
+  owner:
+    name: container1
+  resource:
+    id: container1
+    partitionKey:
+      kind: Hash
+      paths: ["/pk"]
+  options:
+    autoscaleSettings:
+      maxThroughput: 4000
