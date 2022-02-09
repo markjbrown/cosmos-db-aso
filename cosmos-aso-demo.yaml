@@ -19,7 +19,7 @@ metadata:
 spec:
   location: eastus
   owner:
-    name: mjb-aks-cdb
+    name: mjb-aks
   kind: GlobalDocumentDB
   databaseAccountOfferType: Standard
   locations:
@@ -45,7 +45,7 @@ metadata:
 spec:
   location: eastus
   owner:
-    name: container1
+    name: database1
   resource:
     id: container1
     partitionKey:
