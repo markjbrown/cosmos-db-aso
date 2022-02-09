@@ -9,7 +9,7 @@ metadata:
   name: mjb-aks
   namespace: mjb-aks-cosmosdb
 spec:
-  location: westcentralus
+  location: eastus
 ---
 apiVersion: documentdb.azure.com/v1alpha1api20210515
 kind: DatabaseAccount
